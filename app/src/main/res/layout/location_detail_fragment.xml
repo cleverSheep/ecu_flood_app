@@ -41,7 +41,7 @@
                 android:drawableStart="@drawable/ic_building"
                 android:drawablePadding="8dp"
                 android:gravity="start|center"
-                android:text="Well Data"
+                android:text="Static Well Data"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -121,73 +121,22 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_date"
+        android:id="@+id/layout_time"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginTop="16dp"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="@+id/well_cardview"
         app:layout_constraintStart_toStartOf="@+id/well_cardview"
-        app:layout_constraintTop_toBottomOf="@id/well_cardview">
-
-        <TextView
-            android:id="@+id/date_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/date_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="--/--/--"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/date_label"
-            app:layout_constraintTop_toBottomOf="@+id/date_label" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:background="@drawable/button_edit_property"
-            android:text="Edit"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/date_value"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/date_value" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="16dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_date" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_time"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/layout_date"
-        app:layout_constraintStart_toStartOf="@+id/layout_date"
-        app:layout_constraintTop_toBottomOf="@+id/layout_date">
+        app:layout_constraintTop_toBottomOf="@+id/well_cardview">
 
         <TextView
             android:id="@+id/latlng_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Latitude/Longitude"
+            android:text="Underground Water Level"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -230,6 +179,7 @@
         android:id="@+id/layout_precipitation"
         android:layout_width="0dp"
         android:layout_height="80dp"
+        android:layout_marginTop="8dp"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="@+id/layout_time"
         app:layout_constraintStart_toStartOf="@+id/layout_time"
@@ -268,15 +218,6 @@
             app:layout_constraintTop_toTopOf="@+id/precipitation_value" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <View
-        android:id="@+id/view4"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="16dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_precipitation" />
 
     <Button
         android:layout_width="wrap_content"
@@ -289,7 +230,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4" />
+        app:layout_constraintTop_toBottomOf="@+id/layout_precipitation" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
