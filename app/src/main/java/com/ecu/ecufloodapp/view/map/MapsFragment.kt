@@ -35,6 +35,7 @@ class MapsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         mapView.onCreate(savedInstanceState)
 
@@ -53,7 +54,7 @@ class MapsFragment : Fragment() {
             // Add a marker in Sydney and move the camera
             val initial_location = LatLng(34.65, -77.09)
             mMap.moveCamera(CameraUpdateFactory.newLatLng(initial_location))
-
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(12f), 2000, null);
             val layer = KmlLayer(
                 mMap,
                 R.raw.kmlfile, context

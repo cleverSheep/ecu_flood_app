@@ -20,6 +20,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
+            android:background="@drawable/bottom_sheet_toggle"
             android:text=""
             android:textOff=""
             android:textOn="" />
@@ -30,17 +31,46 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
             android:layout_toEndOf="@+id/results_toggle_button"
+            android:text="Predict Flood Risk"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lottie_upload" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="No Well Data Uploaded"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="Upload well data from multiple sites. They'll show up here!"
+        android:textSize="22sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/bottom_sheet_rv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
-
+        android:layout_weight="1"
+        android:background="@android:color/white" />
 
 </LinearLayout>
