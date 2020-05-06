@@ -1,11 +1,10 @@
-package com.ecu.ecufloodapp
+package com.ecu.ecufloodapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.google.android.gms.maps.GoogleMap
+import com.ecu.ecufloodapp.R
 
 class MapsActivity : AppCompatActivity() {
 
